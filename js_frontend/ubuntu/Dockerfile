@@ -41,8 +41,7 @@ RUN sudo sed -i 's/\/var\/www\/html/\/projects/g'  /etc/apache2/sites-available/
     sudo sed -i 's/\/var\/www\//\/projects\//g' /etc/apache2/apache2.conf && \
     sudo sed -i 's/None/All/g' /etc/apache2/apache2.conf && \
     echo "ServerName localhost" | sudo tee -a /etc/apache2/apache2.conf && \
-    sudo a2enmod rewrite && \
-    curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    sudo a2enmod rewrite
 
 # label is used in Servers tab to display mapped port for Apache process on 80 port in the container
 LABEL che:server:80:ref=apache2 che:server:80:protocol=http
