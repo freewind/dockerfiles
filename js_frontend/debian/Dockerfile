@@ -1,5 +1,5 @@
 FROM codenvy/debian_jre
-ENV NODE_VERSION=5.6.0 \
+ENV NODE_VERSION=0.12.9 \
     NODE_PATH=/usr/local/lib/node_modules
     
 RUN sudo apt-get update && \
